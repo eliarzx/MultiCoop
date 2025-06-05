@@ -1,4 +1,4 @@
-# 𝙐𝙣𝙞𝙃𝙪𝙗 𝙈𝙪𝙡𝙩𝙞-𝙋𝙪𝙧𝙥𝙤𝙨𝙚 𝘾𝙤𝙤𝙥𝙚𝙧𝙖𝙩𝙞𝙫𝙚 
+# 𝓤𝓷𝓲𝓗𝓾𝓫 𝓜𝓾𝓵𝓽𝓲-𝓟𝓾𝓻𝓹𝓸𝓼𝓮 𝓒𝓸𝓸𝓹𝓮𝓻𝓪𝓽𝓲𝓿𝓮
 A web-based cooperative management system. UniHub Cooperative allows members to manage accounts, track savings and fixed deposits, monitor transactions, and generate reports through a user-friendly dashboard. Built with PHP, MySQL, HTML/CSS, and JavaScript.
 
 
@@ -10,7 +10,6 @@ will streamline invoicing, payment tracking, and reporting, offering transparenc
 accessibility to both administrators and members.
 
 
-──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ────
 
 
 ## ₊⊹ System Highlights
@@ -22,15 +21,13 @@ accessibility to both administrators and members.
 ✦ Data Security and Backup
 
 
-──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ────
 
 
 ## ₊⊹ Installation Instructions
 
 1. Install [XAMPP](https://www.apachefriends.org/index.html) to run Apache and MySQL locally.  
 2. Clone this repository:  
-   ```bash
-   git clone https://github.com/your-username/unihub-cooperative.git
+   git clone https://github.com/eliarzx/MultiCoop.git
 
 3.    Place the project folder inside XAMPP’s htdocs directory (e.g., C:\xampp\htdocs\unihub-cooperative).
     4.    Open phpMyAdmin (http://localhost/phpmyadmin), create a new database (e.g., unihubdb).
@@ -39,7 +36,6 @@ accessibility to both administrators and members.
     7.    Open your browser and navigate to http://localhost/unihub-cooperative to access the system.
 
 
-──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ────
 
 
 ## ₊⊹ Contribution Guidelines
@@ -52,7 +48,6 @@ Contributions are welcome! To contribute:
     •    Open a pull request for review
     
 
-──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ──── ──── ୨୧ ────
 
 
 
