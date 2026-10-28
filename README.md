@@ -27,19 +27,46 @@ accessibility to both administrators and members.
 
 
 
-## ₊⊹ Installation Instructions
+## Project structure
 
-1. Install [XAMPP](https://www.apachefriends.org/index.html) to run Apache and MySQL locally.   <br>
-2. Clone this repository:  <br>
----- git clone https://github.com/eliarzx/MultiCoop.git<br>
-3.    Place the project folder inside XAMPP’s htdocs directory (e.g., C:\xampp\htdocs\unihub-cooperative).<br>
-4.    Open phpMyAdmin (http://localhost/phpmyadmin), create a new database (e.g., unihubdb).<br>
-5.    Import the provided .sql file found in the database/ folder into your newly created database.<br>
-6.    Update the database configuration in includes/db.php with your MySQL username, password, and database name.<br>
-7.    Open your browser and navigate to http://localhost/unihub-cooperative to access the system.<br>
+```text
+public/             Web document root; existing PHP pages and action endpoints
+  assets/css/       Shared stylesheets
+  assets/images/    SVG and image assets
+  uploads/          Runtime uploads (ignored by Git)
+includes/db.php     Shared database connection
+config/             Database settings and ignored local overrides
+database/sample.sql Database import
+scripts/lint.sh     PHP syntax checks
+```
 
+Page filenames remain unchanged so links, forms, and redirects continue to work
+relative to the web document root. Pages still contain their existing application
+logic and markup.
 
+## Installation
 
+1. Install PHP with the `mysqli` extension and MySQL/MariaDB (or XAMPP).
+2. Clone this repository and create a MySQL database named `unihubdb`.
+3. Import `database/sample.sql` into that database using phpMyAdmin or the MySQL CLI.
+   The dump contains sample records; review them before using a shared database.
+4. Copy `config/database.example.php` to `config/database.local.php` and set your
+   database credentials. The local file is ignored by Git. Alternatively set
+   `DB_HOST`, `DB_USER`, `DB_PASSWORD`, and `DB_NAME`; environment variables override
+   local settings.
+5. For local development, run from the repository root:
+
+   ```sh
+   php -S localhost:8000 -t public
+   ```
+
+   Open http://localhost:8000. For Apache/XAMPP, configure the site's DocumentRoot
+   to the project's `public/` directory. On shared hosting, put the contents of
+   `public/` in the web root and keep `config/` and `includes/` one level above it.
+   Keep the SQL dump outside the web root.
+6. Ensure `public/uploads/` is writable by the PHP process for payment proofs.
+
+Run syntax checks with `sh scripts/lint.sh`.
 
 ## ₊⊹ Contribution Guidelines
 
@@ -61,11 +88,8 @@ Hello ˙ᵕ˙ This is one of my final requirements in Univ and is published to p
 Please do not re-upload or copy this code for educational assignments without my knowledge (·•᷄ࡇ•᷅ ). Thank you!
 
 
-## ₊⊹ Note
+## Development note
 
-The project was built in a limited time and while I was still learning ( ˵ •̀ ᴗ •́˵). <br>
-Things are a little bit messy here and there--files are also in their not-so-organized places, hehe. 
-
-
-
-
+The application uses procedural PHP. The directory layout separates public files,
+configuration, and database resources; a future refactor can extract shared page
+layouts and feature logic incrementally.
